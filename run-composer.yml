@@ -7,8 +7,8 @@ image_resource:
     tag: latest
 
 inputs:
-  - name: push-image
+  - name: push_image
 
 run:
-  path: push-image/run-composer.sh
+  path: push_image/run-composer.sh
 
