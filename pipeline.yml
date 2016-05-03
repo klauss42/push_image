@@ -5,6 +5,8 @@ jobs:
   serial: true
   plan:
   - get: push_image
+  - task: run-composer
+    file: push-image/run-composer.yml
   - put: hello-world-docker-image
     params:
       build: push_image/
