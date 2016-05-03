@@ -4,16 +4,16 @@ jobs:
   public: true
   serial: true
   plan:
-  - get: resource-tutorial
+  - get: push_image
   - put: hello-world-docker-image
     params:
-      build: resource-tutorial/35_push_docker_image/docker
+      build: push_image/deploy/hello
 
 resources:
-- name: resource-tutorial
+- name: push_image
   type: git
   source:
-    uri: https://github.com/drnic/concourse-tutorial.git
+    uri: https://github.com/klauss42/push_image.git
 
 - name: hello-world-docker-image
   type: docker-image
