@@ -5,6 +5,9 @@ image_resource:
   source:
     repository: szops/twix-shopware-base
     tag: latest
+    email: {{docker-hub-email}}
+    username: {{docker-hub-username}}
+    password: {{docker-hub-password}}
 
 inputs:
   - name: push_image
