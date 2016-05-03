@@ -7,7 +7,7 @@ jobs:
   - get: push_image
   - put: hello-world-docker-image
     params:
-      build: push_image
+      build: push_image/
       dockerfile: push_image/deploy/hello/Dockerfile
 
 resources:
